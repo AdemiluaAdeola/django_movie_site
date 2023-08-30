@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In To Your Account</title>
+</head>
+<style>
+    body{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        background-color: rgb(8, 71, 71);
+    }
+    .navbar{
+        font-family: fantasy;
+        font-size: 28px;
+    }
+    .register{
+        padding-top: 110px;
+        padding-left: 270px;
+        
+        color: white;
+        font-size: 18px;
+    }
+    input{
+        width: 50%;
+        height: 40px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        
+    }
+    a{
+        color: rgb(94, 131, 199);
+    }
+    button{
+        width: 51%;
+        height: 40px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        
+    }
+    .register-form{
+        padding-top: 10px;
+        padding-bottom: 15px;
+        padding-left: 90px;
+        color: white;
+    }
+    h2{
+        padding-left: 90px;
+        color: white;
+        
+    }
+</style>
+<body>
+    <div class="navbar">
+        <a href="/">MOVIE-SITE</a>
+    </div>
+    <hr>
+    <div class="register">
+        <h2>Join Us Today</h2>
+        <form method="post" class="register-form">
+            {% csrf_token %}
+            <input type="text" name="username" id="username" placeholder="Username"><br>
+            <input type="password" name="password" id="password" placeholder="Password"><br><br>
+            <button type="submit">Sign Up</button>
+        </form>
+            <p class="register-form">Not yet a member, click to <a href="/accounts/signup/">sign up</a></p>
+    </div>
+</body>
+</html>
